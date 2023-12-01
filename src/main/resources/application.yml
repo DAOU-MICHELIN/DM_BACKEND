@@ -1,0 +1,24 @@
+spring:
+  # DATABASE SETTING
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/${DB_NAME}?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  # JPA SETTING
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        # Due to lower version of mariadb
+        dialect: org.hibernate.dialect.MySQLDialect
+
+logging:
+  level:
+    # HIBERNATE LOG
+    org.hibernate:
+      type.descriptor.sql: trace
+      SQL: DEBUG
