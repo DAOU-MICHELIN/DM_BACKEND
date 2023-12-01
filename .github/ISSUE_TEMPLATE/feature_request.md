@@ -1,3 +1,12 @@
+---
+name: Feature request
+about: Suggest an idea for this project
+title: "[FEATURE] "
+labels: enhancement
+assignees: ''
+
+---
+
 ## 🐳 Description
 어떤 기능인지 상세하게 적어주세요.
 
@@ -16,6 +25,3 @@
 
 ## 🐟 Note
 기능 명세서, UI, 기획서 등의 문서 링크를 알려주세요.
-
-
-

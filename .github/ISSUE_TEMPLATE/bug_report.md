@@ -1,3 +1,12 @@
+---
+name: Bug report
+about: Create a report to help us improve
+title: "[BUG] "
+labels: bug
+assignees: ''
+
+---
+
 ## 🆘️ Description
 어떤 버그인지 상세하게 작성해주세요.
 
@@ -13,8 +22,3 @@
 
 ## 🆘️ Note
 어떤 버그인지 이미지 등의 참고사항이 있다면 알려주세요.
-
-
-
-
-
