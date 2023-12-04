@@ -22,3 +22,4 @@ logging:
     org.hibernate:
       type.descriptor.sql: trace
       SQL: DEBUG
+  config: classpath:logback-spring.xml
