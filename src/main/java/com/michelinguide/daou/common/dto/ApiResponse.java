@@ -28,3 +28,9 @@ public class ApiResponse<T> {
 
         return new ApiResponse(ApiResponseCode.LOAD_SUCCESS, "");
     }
+
+    public static  ApiResponse fail(ApiResponseCode apiResponseCode){
+
+        return new ApiResponse(apiResponseCode, "");
+    }
+}
