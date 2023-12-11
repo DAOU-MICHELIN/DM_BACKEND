@@ -1,6 +1,7 @@
 package com.michelinguide.daou.auth.service.impl;
 
 import com.michelinguide.daou.auth.dtos.MemberDto;
+import com.michelinguide.daou.auth.dtos.MemberDto.JoinRequest;
 import com.michelinguide.daou.auth.entity.Member;
 import com.michelinguide.daou.auth.repository.MemberRepository;
 import com.michelinguide.daou.auth.service.MemberService;
@@ -17,4 +18,16 @@ public class MemberServiceImpl implements MemberService {
         Member savedMember = memberRepository.save(request.toEntity());
         return savedMember.getId();
     }
+
+    public void delete(Long id) {
+        memberRepository.deleteById(id);
+    }
+
+    public void memberRegister(JoinRequest request) {
+        // 이메일 validation
+
+        // 이메일 전송
+
+    }
+
 }
