@@ -18,3 +18,13 @@ public class ApiResponse<T> {
         this.message = apiResponseCode.getMessage();
         this.data = data;
     }
+
+    public static <T> ApiResponse<T> changeSuccess(ApiResponseCode apiResponseCode, T data) {
+
+        return new ApiResponse(apiResponseCode, data);
+    }
+
+    public static ApiResponse loadSuccess() {
+
+        return new ApiResponse(ApiResponseCode.LOAD_SUCCESS, "");
+    }
