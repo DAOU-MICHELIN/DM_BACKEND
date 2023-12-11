@@ -1,9 +1,7 @@
 package com.michelinguide.daou.common.dto;
 
 import com.michelinguide.daou.common.code.ApiResponseCode;
-import lombok.Builder;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 
 @Getter
 public class ApiResponse<T> {
