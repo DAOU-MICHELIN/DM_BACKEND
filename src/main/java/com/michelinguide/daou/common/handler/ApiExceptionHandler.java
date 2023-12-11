@@ -23,3 +23,11 @@ public class ApiExceptionHandler {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                              .body(ApiResponse.fail(apiResponseCode));
     }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ApiResponse> internalServerHandler(Exception e) {
+
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                             .body(ApiResponse.fail(ApiResponseCode.SERVER_FAIL));
+    }
+}
