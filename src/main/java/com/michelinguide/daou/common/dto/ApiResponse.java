@@ -22,9 +22,9 @@ public class ApiResponse<T> {
         return new ApiResponse(apiResponseCode, data);
     }
 
-    public static ApiResponse loadSuccess() {
+    public static ApiResponse readSuccess() {
 
-        return new ApiResponse(ApiResponseCode.LOAD_SUCCESS, "");
+        return new ApiResponse(ApiResponseCode.READ_SUCCESS, "");
     }
 
     public static  ApiResponse fail(ApiResponseCode apiResponseCode){
