@@ -1,5 +1,6 @@
 package com.michelinguide.daou.auth.service;
 
+import com.michelinguide.daou.auth.dtos.EmailDto;
 import com.michelinguide.daou.auth.dtos.MemberDto;
 
 public interface MemberService {
@@ -8,6 +9,6 @@ public interface MemberService {
 
      void delete(Long id);
 
-     void memberRegister(MemberDto.JoinRequest request);
+     void confirmEmail(EmailDto.ConfirmRequest request);
 
 }
