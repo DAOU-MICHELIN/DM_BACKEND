@@ -1,4 +1,5 @@
 spring:
+
   # DATABASE SETTING
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
@@ -15,6 +16,11 @@ spring:
         show_sql: true
         # Due to lower version of mariadb
         dialect: org.hibernate.dialect.MySQLDialect
+
+  # REDIS SETTING
+  data:
+    redis:
+      port: 6379
 
 logging:
   level:
