@@ -6,6 +6,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableFeignClients
 @SpringBootApplication
+@EnableAspectJAutoProxy
 public class DaouApplication {
 
 	public static void main(String[] args) {
