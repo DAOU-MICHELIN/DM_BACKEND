@@ -37,7 +37,6 @@ public class Member extends BaseEntity{
 
     private boolean isDeleted = false;
 
-    private boolean isVerified = false;
 
     @Builder
     public Member(String email, String password, String nickname) {
@@ -47,7 +46,4 @@ public class Member extends BaseEntity{
         this.role = Role.MEMBER;
     }
 
-    public void verifyEmail() {
-        this.isVerified = true;
-    }
 }

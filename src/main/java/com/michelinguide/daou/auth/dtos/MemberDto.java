@@ -14,6 +14,8 @@ public class MemberDto {
 
         private String nickname;
 
+        private String authCode;
+
         public Member toEntity () {
             return Member.builder()
                          .email(email)
