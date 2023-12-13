@@ -2,6 +2,7 @@ package com.michelinguide.daou.common.handler;
 
 import com.michelinguide.daou.common.code.ApiResponseCode;
 import com.michelinguide.daou.common.dto.ApiResponse;
+import com.michelinguide.daou.common.handler.exception.CustomException;
 import com.michelinguide.daou.common.handler.exception.UnauthorizedException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -22,6 +23,14 @@ public class ApiExceptionHandler {
 
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                              .body(ApiResponse.fail(apiResponseCode));
+    }
+    @ExceptionHandler(CustomException.class)
+    public ResponseEntity<ApiResponse> customExceptionHandler(CustomException exception){
+        ApiResponseCode apiResponseCode = exception.getApiResponseCode();
+
+        log.error("code : {} message: {}", apiResponseCode.getCode(), apiResponseCode.getMessage());
+        // TODO : 중복 이메일은 409 conflict 에러 발생. status 별로 handler.
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ApiResponse.fail(apiResponseCode));
     }
 
     @ExceptionHandler(Exception.class)

@@ -15,6 +15,7 @@ public enum ApiResponseCode {
     // 4xx : FAIL CODE
     // 401 (UnAuthorization)
     TOKEN_FAIL("U000", "테스트용입니다."),
+    DUPLICATE_EMAIL("U001", "이미 가입한 이메일주소입니다."),
 
     // 500 (Internal Server Exception)
     SERVER_FAIL("I000" ,"서버에서 발생한 오류입니다.");
